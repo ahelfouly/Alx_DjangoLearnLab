@@ -1,10 +1,3 @@
-# CRUD Operations for Book Model
-
-This file documents the CRUD operations performed on the `Book` model in the `bookshelf` app.
-
-### 1. Create Operation
-
-```python
 from bookshelf.models import Book
 
 # Create a new Book instance
