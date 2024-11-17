@@ -27,3 +27,15 @@ class Librarian(models.Model):
 
     def __str__(self):
         return self.name
+    
+class UserProfile(models.Model):
+    class Roles(models.TextChoices):
+        admin = "Admin"
+        librarian = "Librarian"
+        member = "Member"
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='userprofiles')
+    role = models.CharField(max_length=20, choices=Roles, default=Roles.member)
+
+    def __str__(self):
+        return f"{self.user.username}'s profile."
