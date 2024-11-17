@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, HttpResponse
 from .models import Library, Author, Book, Librarian, Library,UserProfile
 from django.template import loader
 from django.views.generic import TemplateView, DetailView, CreateView, UpdateView
+from django.views.generic.detail import DetailView
 from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required, user_passes_test, permission_required
